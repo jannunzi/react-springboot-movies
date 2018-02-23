@@ -18,14 +18,23 @@
             render: function() {
                 var rows = [];
                 this.props.movies.forEach(function(movie) {
-                rows.push(<Movie movie={movie} />);
-                return (<div>Movie Table</div>);
+                    rows.push(<Movie movie={movie} />);
+                });
+                return (
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Name</th><th>Age</th><th>Years</th>
+                      </tr>
+                    </thead>
+                    <tbody>{rows}</tbody>
+                  </table>);
             }
         });
         var MOVIES = [
           {title: 'Blade Runner', imdbId: 'tt0083658'},
           {title: 'Blade Runner 2049', imdbId: 'tt1856101'},
-          {title: 'Avatar', imdbId: tt0499549}
+          {title: 'Avatar', imdbId: 'tt0499549'}
         ];
         ReactDOM.render(
             <MovieTable movies={MOVIES}/>, document.getElementById('root')
