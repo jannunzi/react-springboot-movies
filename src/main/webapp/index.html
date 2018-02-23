@@ -42,8 +42,11 @@
           {title: 'Avatar', imdbId: 'tt0499549'}
         ];
         var App = React.createClass({
+          getInitialState: function () {
+            return {movies: MOVIES};
+          },
           render() {
-            return ( <MovieTable movies={MOVIES}/> );
+            return ( <MovieTable movies={this.state.movies}/> );
           }
         });
         ReactDOM.render(
