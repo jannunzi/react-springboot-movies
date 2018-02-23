@@ -2,11 +2,12 @@
 <html>
 <head>
     <title>React + Spring</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 	<h1>React + Spring Boot</h1>
 
-    <div id='root'></div>
+    <div id='root' class='container-fluid'></div>
 
     <script type="text/babel">
         var Movie = React.createClass({
@@ -25,7 +26,7 @@
                     rows.push(<Movie movie={movie} />);
                 });
                 return (
-                  <table>
+                  <table className='table table-striped'>
                     <thead>
                       <tr>
                         <th>Title</th><th>Imdb ID</th>
