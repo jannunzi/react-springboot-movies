@@ -16,6 +16,9 @@
                   <tr>
                     <td>{this.props.movie.title}</td>
                     <td>{this.props.movie.imdbId}</td>
+                    <td>
+                        <button className="btn btn-info" onClick={this.handleDelete}>Delete</button>
+                    </td>
                   </tr>);
             }
         });
@@ -29,7 +32,7 @@
                   <table className='table table-striped'>
                     <thead>
                       <tr>
-                        <th>Title</th><th>Imdb ID</th>
+                        <th>Title</th><th>Imdb ID</th><th>&nbsp;</th>
                       </tr>
                     </thead>
                     <tbody>{rows}</tbody>
