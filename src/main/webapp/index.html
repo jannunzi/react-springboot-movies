@@ -15,7 +15,8 @@
               return {display: true };
             },
             render: function() {
-                return (
+                if (this.state.display==false) return null;
+                else return (
                   <tr>
                     <td>{this.props.movie.title}</td>
                     <td>{this.props.movie.imdbId}</td>
