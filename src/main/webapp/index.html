@@ -19,8 +19,13 @@
                 return (<div>Movie Table</div>);
             }
         });
+        var MOVIES = [
+          {title: 'Blade Runner', imdbId: 'tt0083658'},
+          {title: 'Blade Runner 2049', imdbId: 'tt1856101'},
+          {title: 'Avatar', imdbId: tt0499549}
+        ];
         ReactDOM.render(
-            <MovieTable />, document.getElementById('root')
+            <MovieTable movies={MOVIES}/>, document.getElementById('root')
         );
     </script>
 
