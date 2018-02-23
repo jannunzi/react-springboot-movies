@@ -41,8 +41,13 @@
           {title: 'Blade Runner 2049', imdbId: 'tt1856101'},
           {title: 'Avatar', imdbId: 'tt0499549'}
         ];
+        var App = React.createClass({
+          render() {
+            return ( <MovieTable movies={MOVIES}/> );
+          }
+        });
         ReactDOM.render(
-            <MovieTable movies={MOVIES}/>, document.getElementById('root')
+            <App/>, document.getElementById('root')
         );
     </script>
 
