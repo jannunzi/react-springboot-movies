@@ -16,6 +16,9 @@
         });
         var MovieTable = React.createClass({
             render: function() {
+                var rows = [];
+                this.props.movies.forEach(function(movie) {
+                rows.push(<Movie movie={movie} />);
                 return (<div>Movie Table</div>);
             }
         });
