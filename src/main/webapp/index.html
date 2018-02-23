@@ -46,6 +46,9 @@
             return {movies: []};
           },
           componentDidMount: function () {
+            this.loadMoviesFromServer();
+          },
+          loadMoviesFromServer: function () {
             var self = this;
             $.ajax({
               url: "http://localhost:8080/api/movies"
