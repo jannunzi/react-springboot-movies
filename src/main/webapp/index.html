@@ -43,7 +43,10 @@
         ];
         var App = React.createClass({
           getInitialState: function () {
-            return {movies: MOVIES};
+            return {movies: []};
+          },
+          componentDidMount: function () {
+            this.setState({movies: MOVIES});
           },
           render() {
             return ( <MovieTable movies={this.state.movies}/> );
