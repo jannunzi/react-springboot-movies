@@ -11,6 +11,9 @@
 
     <script type="text/babel">
         var Movie = React.createClass({
+            getInitialState: function() {
+              return {display: true };
+            },
             render: function() {
                 return (
                   <tr>
